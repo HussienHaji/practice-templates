@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --primary: #536942;
+  --secondary: #ffd936;
+  --white: #efefef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--primary);
+}
+
+#main {
+  background-image: url(img/main.png);
+  min-height: 70vh;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-list a {
+  color: var(--white);
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  padding: 12px 20px;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.btn-primary {
+  border: 0;
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  color: var(--white);
+}
+
+.main-content .intro-heading {
+  font-size: 50px;
+}
+
+.main-content .main-heading {
+  font-size: 120px;
+  margin-top: -20px;
+}
+
+.main-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .nav-list {
+    flex-direction: column;
+    background: gray;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: right 0.5s ease;
+  }
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-list li:not(:last-child) {
+    text-align: left;
+    width: 100%;
+    padding: 10px 30px;
+    border-bottom: 1px solid var(--white);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.section-title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.section-title .line {
+  width: 150px;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--secondary);
+  margin: 0 auto;
+}
+
+section {
+  margin: 80px auto;
+}
+
+/*  ----------services */
+.services {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.service {
+  width: 300px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.service img {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.service img:hover {
+  transform: scale(1.05);
+}
+
+#testimonial {
+  background-color: #f1f2fa;
+}
+
+#testimonial .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  gap: 30px;
+  padding: 50px 16px;
+}
+
+#testimonial .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonial h1 {
+  font-size: 50px;
+  font-family: "Forum", sans-serif;
+  text-align: center;
+}
+
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+#about .container .about-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+
+#about .container .about-content h1 {
+  font-family: "Forum", sans-serif;
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  #about .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+#questions {
+  min-height: 500px;
+  background: url(img/main-2.png) bottom center/cover;
+}
+
+#questions .container {
+  max-width: 500px;
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  text-align: center;
+}
+
+#questions h1 {
+  font-size: 50px;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+footer .container {
+  display: flex;
+  padding: 40px 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+
+@media (max-width:650px) {
+    footer .container{
+        flex-direction: column;
+        gap: 16px;
+    }
+}
